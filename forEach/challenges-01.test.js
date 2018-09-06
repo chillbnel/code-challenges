@@ -173,7 +173,20 @@ const createList = (availableItems) => {
 // ------------------------------------------------------------------------------------------------
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  const answer = [];
+  arr.forEach(num => {
+    if (num % 15 === 0){
+      answer.push('Fizz Buzz');
+    } else if (num % 3 === 0){
+      answer.push('Fizz');
+    } else if (num % 5 === 0){
+      answer.push('Buzz');
+    } else {
+      answer.push(num);
+    }
+  });
+
+  return answer;
 }
 
 // ------------------------------------------------------------------------------------------------
