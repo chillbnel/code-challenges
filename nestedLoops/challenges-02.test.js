@@ -53,12 +53,15 @@ const grandTotal = (hours, stores) => {
 // and create an object for each hour. Return an array of the formatted data.
 // ------------------------------------------------------------------------------------------------
 
-const salesData = (data) => {
-  data.forEach(element => {
-    element = 
+const salesData = (hours, data) => {
+  const arr =[];
+  data.forEach(hourlyData, index => {
+    const obj = {};
+    obj.sales = `${hourlyData} cookies`;
+    obj.time = hours[index];
+    arr.push(obj);
   });
-
-  };
+  return arr;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -76,7 +79,7 @@ const salesData = (data) => {
 const giveValentines = (list) => {
   // Solution code here...
   for (let i = 0; list.length; i++) {
-    
+
   }
 };
 
