@@ -33,7 +33,7 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  return arr[2].items[1].quantity;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -55,7 +55,13 @@ const howManyTreats = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const battleship = (board, row, col) => {
-  // Solution code here...
+  var hitMiss = ''
+  if (board[row][col] === '#'){
+    hitMiss = 'hit';
+  }else{
+    hitMiss = 'miss';
+  }
+  return hitMiss
 };
 
 // ------------------------------------------------------------------------------------------------
