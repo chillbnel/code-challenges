@@ -103,6 +103,15 @@ const weeklyTemperatures = [
 
 const averageDailyTemperature = (weather) => {
   // Solution code here...
+  let numDays = 0;
+  let absTotalTemp = 0;
+  for (let i = 0; i < weather.length; i++){
+    for (let j = 0; j < weather[i].length; j++){
+      absTotalTemp += weather[i][j];
+      numDays++;
+    }
+  }
+  return (absTotalTemp/numDays);
 };
 
 // ------------------------------------------------------------------------------------------------
