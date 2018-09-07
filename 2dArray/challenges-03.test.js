@@ -133,8 +133,13 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
-  
+  // let answer = 1000;
+  // weather.forEach(week => {
+  //   if (week.average() < answer) {
+  //     answer = week.average();
+  //   }
+  // });
+  // return answer;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -163,7 +168,14 @@ const lowestWeeklyAverage = (weather) => {
 // ------------------------------------------------------------------------------------------------
 
 const excel = (str) => {
-  // Solution code here...
+  let answer = [];
+  str.split('\n').forEach(row => {
+    const splitRow = row.split(',');
+    let rowSum = 0;
+    splitRow.forEach(num => rowSum += parseInt(num));
+    answer.push(rowSum);
+  });
+  return answer;
 };
 
 // ------------------------------------------------------------------------------------------------
