@@ -134,6 +134,7 @@ let lowestWeeklyTemperatureData = [
 
 const lowestWeeklyAverage = (weather) => {
   // Solution code here...
+  
 };
 
 // ------------------------------------------------------------------------------------------------
