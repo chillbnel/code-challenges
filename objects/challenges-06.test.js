@@ -106,7 +106,8 @@ let characters = [
 ]
 
 const totalCharacters = (arr) => {
-  // Solution code here...
+
+  return getFrom(arr, 'values').length;
 }
 
 // ------------------------------------------------------------------------------------------------
