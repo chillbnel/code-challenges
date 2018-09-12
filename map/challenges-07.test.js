@@ -1,7 +1,7 @@
 'use strict';
 
 // ------------------------------------------------------------------------------------------------
-// CHALLENGE 1
+// CHALLENGE 1 [DONE]
 //
 // Write a function named forLoopTwoToThe that, given an array of integers as input, iterates over
 // the array and returns a new array. The returned array should containing the result of raising 2
