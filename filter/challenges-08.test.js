@@ -26,8 +26,8 @@ const oddValues = (input) => {
 
 
 const filterStringsWithVowels = (input) => {
-  return input.filter(word => word.includes("a","e","i","o","u"));
-    }
+  return input.filter(word => /[aeiou]/.test(word));
+}
     
 
 
@@ -42,8 +42,8 @@ const filterStringsWithVowels = (input) => {
 // ------------------------------------------------------------------------------------------------
 
 const notInFirstArray = (forbiddenValues, input) => {
-  // Solution code here...
-};
+  return input.filter(num => !forbiddenValues.includes(num));
+}
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
