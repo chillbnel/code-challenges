@@ -49,7 +49,10 @@ const wordsToCharList = (input) => {
 
 const totalSumCSV = (input) => {
   let total = 0;
-  // Solution code here...
+  for (let i = 0; i < input.length; i++){
+    var num = input.split(',');
+    total += parseInt(num[i]);
+ }
   return total;
 };
 
@@ -97,7 +100,9 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  for (let i = 0; i < recipe.length; i++){
+    result.push(recipe.slice)
+  }
   return result;
 }
 
