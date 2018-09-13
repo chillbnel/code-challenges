@@ -11,7 +11,10 @@
 
 const pushIntoSecond = (arr) => {
   const second = [];
-  // Solution code here...
+  for (let i = 0; i < arr.length; i++){
+    second.push(arr[i]);
+  }
+  return second;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -26,7 +29,11 @@ const pushIntoSecond = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const addBonusPoints = (arr) => {
-  // Solution code here...
+  for (let update of arr){
+    arr.push(update += 5);
+    
+  }
+  return arr;
 }
 
 // ------------------------------------------------------------------------------------------------
