@@ -32,12 +32,7 @@ const howMuchPencil = (name) => {
 // ------------------------------------------------------------------------------------------------
 
 const wordsToCharList = (input) => {
-  let result = [];
-    for (let i = 0; i < input.length; i++){
-      var letter = input.split('');
-      result.push(letter[i]);
-    }
-  return result;
+  return input.split('');
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -49,12 +44,17 @@ const wordsToCharList = (input) => {
 
 const totalSumCSV = (input) => {
   let total = 0;
-  for (let i = 0; i < input.length; i++){
-    var num = input.split(',');
-    total += parseInt(num[i]);
- }
-  return total;
-};
+  let num = input.split(','); //identifies the where the split will occur
+  num.forEach((val) => { //loop runs through the split identifier, in this case ","
+    let numPull = Number(val); //takes whatever is pulled and attempts to turn it into a number
+    if(!Number.isNaN(numPull)){//enters this statement if a number
+      total += numPull;//adds to the total
+    }
+  })
+  return total; 
+ };
+
+
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
