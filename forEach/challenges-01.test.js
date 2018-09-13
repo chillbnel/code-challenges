@@ -50,7 +50,7 @@ const addBonusPoints = (arr) => {
 const addCurve = (arr) => {
   const curve = [];
   for (let update in arr){
-    curve.push(update *= .05);
+    curve.push(arr[update] *= 1.05);
   }
   return curve; 
 }
