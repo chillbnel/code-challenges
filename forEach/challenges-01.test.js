@@ -11,7 +11,10 @@
 
 const pushIntoSecond = (arr) => {
   const second = [];
-  // Solution code here...
+  for (let i = 0; i < arr.length; i++){
+    second.push(arr[i]);
+  }
+  return second;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -26,7 +29,12 @@ const pushIntoSecond = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const addBonusPoints = (arr) => {
-  // Solution code here...
+  const bonus = [];
+  for (let update of arr){
+    bonus.push(update += 5);
+    
+  }
+  return bonus;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -40,7 +48,11 @@ const addBonusPoints = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const addCurve = (arr) => {
-  // Solution code here...
+  const curve = [];
+  for (let update in arr){
+    curve.push(update *= .05);
+  }
+  return curve; 
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -52,12 +64,12 @@ const addCurve = (arr) => {
 // The speaker function should return the string in all uppercase letters only by invoking the callback.
 // ------------------------------------------------------------------------------------------------
 
-const greeting = (word) => {
-  // Solution code here...
-}
+const greeting = (word) => { 
+  return word.toUpperCase()
+};
 
 const speaker = (message, callback) => {
-  // Solution code here...
+  return callback(message);
 }
 
 // ------------------------------------------------------------------------------------------------
