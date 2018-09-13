@@ -100,11 +100,13 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  for (let i = 0; i < recipe.length; i++){
-    result.push(recipe.slice)
-  }
+  recipe.ingredients.forEach( (ingredients) => { //iterates thru the ingrediates array within the gruffaloCrumble (passed thru recipe)
+    let removeAmounts = ingredients.slice(ingredients.indexOf(' ')+1); //slices out the first element of each string in the ingrediants array
+    let removeUnits = removeAmounts.slice(removeAmounts.indexOf(' ')+1); //slices out the next element in each string in the ingrediants array, this time slicing the newly created removeAmounts string.
+    result.push(removeUnits); //pushes the new, doublely stripped string, to the results array.
+  })
   return result;
-}
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
