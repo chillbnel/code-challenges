@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------------------------
 
 const countNumberOfElements = (input) => {
-  return input.reduce((count) => count + 1);
+  return input.reduce((count) => count + 1, 0);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -108,9 +108,16 @@ const snorlaxData = {
   weight: 4600,
 };
 
-const extractStat = (statName, input) => {
-  // Solution code here...
-};
+const extractStat = (statName, input) => input.reduce( (ans, x) => {
+  if (ans !== null){
+    return null;
+  } else if(x.stat.name = statName){
+    return x;
+  } else {
+
+  }
+});
+
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
@@ -133,9 +140,9 @@ const calculateAverage = (input) => {
 //
 // ------------------------------------------------------------------------------------------------
 
-const extractChildren = input => {
-  // Solution code here...
-};
+const extractChildren = input => input 
+  .filter(char => char.name.includes('a'))
+  .reduce( (ans, char) => char.children ? ans.concat(char.children) : ans, []);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 6
